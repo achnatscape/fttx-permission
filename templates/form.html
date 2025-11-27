@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>เพิ่มข้อมูล FTTX Permission</title>
+    <style>
+        body { font-family: Tahoma; margin: 40px; }
+        h1 { margin-bottom: 20px; }
+        label { font-weight: bold; display: block; margin-top: 10px; }
+        input, select { width: 350px; padding: 5px; margin-top: 5px; }
+        .row { display: flex; gap: 40px; }
+        .col { flex: 1; }
+        .btn { margin-top: 20px; padding: 8px 20px; }
+    </style>
+</head>
+
+<body>
+<h1>เพิ่มข้อมูล FTTX Permission</h1>
+
+<form action="/submit" method="post">
+
+<div class="row">
+<div class="col">
+
+<label>AWO Permission:</label>
+<input type="text" name="AWO_Work_Permission">
+
+<label>Region:</label>
+<input type="text" name="Region">
+
+<label>Province:</label>
+<input type="text" name="Province">
+
+<label>Route Name:</label>
+<input type="text" name="Route_Name">
+
+<label>Project Name:</label>
+<input type="text" name="Project_Name">
+
+<label>Contractor:</label>
+<input type="text" name="Contractor">
+
+<label>Submit NBTC No:</label>
+<input type="text" name="Submit_NBTC_No">
+
+<label>Submit NBTC Date:</label>
+<input type="date" name="Submit_NBTC_Date">
+
+<label>NBTC Approval No:</label>
+<input type="text" name="NBTC_Approval_No">
+
+<label>NBTC Approval Date:</label>
+<input type="date" name="NBTC_Approval_Date">
+
+<label>Agencies Abbrev:</label>
+<input type="text" name="Agencies_Abbrev">
+
+</div>
+<div class="col">
+
+<label>Authority Name:</label>
+<input type="text" name="Authority_Name">
+
+<label>Cable Type:</label>
+<input type="text" name="Cable_Type">
+
+<label>Distance (Meter):</label>
+<input type="number" step="0.01" name="Distance_Meter">
+
+<label>Pole/Box Count:</label>
+<input type="number" name="Pole_Box_Count">
+
+<label>Submit Authority No:</label>
+<input type="text" name="Submit_Authority_No">
+
+<label>Submit Authority Date:</label>
+<input type="date" name="Submit_Authority_Date">
+
+<label>Operation Fee:</label>
+<input type="text" name="Operation_Fee">
+
+<label>Operation Fee Date:</label>
+<input type="date" name="Operation_Fee_Date">
+
+<label>Authority Approval No:</label>
+<input type="text" name="Authority_Approval_No">
+
+<label>Authority Approval Date:</label>
+<input type="date" name="Authority_Approval_Date">
+
+<label>Install Date:</label>
+<input type="date" name="Install_Date">
+
+</div>
+</div>
+
+<button class="btn" type="submit">บันทึก</button>
+
+</form>
+
+</body>
+</html>

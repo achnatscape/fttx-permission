@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Request, Form
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
-import pyodbc
+import pymssql  # แทน pyodbc
 
 app = FastAPI()
 
@@ -15,10 +15,13 @@ conn_str = (
 
 templates = Jinja2Templates(directory="templates")
 
-
 def get_conn():
-    return pyodbc.connect(conn_str)
-
+    return pymssql.connect(
+        server='your-server-name.database.windows.net',
+        user='your-username',
+        password='your-password',
+        database='your-db-name'
+    )
 
 # ============================
 #  หน้า UI ฟอร์มกรอกข้อมูล

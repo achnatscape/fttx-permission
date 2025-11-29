@@ -8,10 +8,10 @@ templates = Jinja2Templates(directory="templates")
 
 def get_conn():
     return pymssql.connect(
-        server='your-sql-server',     # 🔁 เปลี่ยนตรงนี้
-        user='your-username',
-        password='your-password',
-        database='FTTx_db'
+        server="YOUR-SQLSERVER",
+        user="YOUR-USER",
+        password="YOUR-PASSWORD",
+        database="FTTx_db"
     )
 
 @app.get("/", response_class=HTMLResponse)
@@ -30,6 +30,7 @@ async def submit_form(
     Pole_Box_Count: int = Form(...),
     Submit_NBTC_Date: str = Form(...),
 ):
+
     conn = get_conn()
     cursor = conn.cursor()
 

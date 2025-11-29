@@ -2,16 +2,17 @@ from fastapi import FastAPI, Request, Form
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 import pymssql
+import os
 
 app = FastAPI()
 templates = Jinja2Templates(directory="templates")
 
 def get_conn():
     return pymssql.connect(
-        server="YOUR-SQLSERVER",
-        user="YOUR-USER",
-        password="YOUR-PASSWORD",
-        database="FTTx_db"
+        server=os.getenv("DB_SERVER"),
+        user=os.getenv("DB_USER"),
+        password=os.getenv("DB_PASSWORD"),
+        database=os.getenv("DB_NAME")
     )
 
 @app.get("/", response_class=HTMLResponse)
